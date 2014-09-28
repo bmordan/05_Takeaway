@@ -1,4 +1,4 @@
-class LineItem
+class GiveMe
 
   attr_reader :dish
   attr_reader :quantity
