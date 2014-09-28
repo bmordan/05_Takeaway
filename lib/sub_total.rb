@@ -1,4 +1,4 @@
-class GiveMe
+class SubTotal
 
   attr_reader :dish
   attr_reader :quantity
@@ -6,6 +6,10 @@ class GiveMe
   def initialize(dish,quantity)
     @dish = dish
     @quantity = quantity
+  end
+
+  def subtotal
+    dish.price * quantity
   end
 
 end
