@@ -11,7 +11,7 @@ class Customer
   end
 
   def place(order)
-    sms = "Thank you #{@name}! Your order was placed and will be delivered before #{order.delivery_time}"
+    sms = "Thank you #{@name}! Your order was placed and will be delivered before #{order.delivery_time}, and you will be charged £ #{order.total}."
     send = Send.new
     send.message(@phone,sms)
   end
