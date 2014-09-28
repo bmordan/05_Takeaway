@@ -6,7 +6,11 @@ describe Menu do
 
   it "should be able to add a dish to the menu" do
     menu.items << dish
-    expect(menu.items.count).to eq (1)
+    expect(menu.items.count).to eq (6)
+  end
+
+  it "should initialize with 5 default dishes" do
+    expect(menu.items.count).to eq(5)
   end
 
 end

@@ -20,7 +20,7 @@ class Send
       :to => to,
       :from => @from
     )
-    "message: " << body
+    body
   end
 
 end
