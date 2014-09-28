@@ -5,7 +5,7 @@ class Order
   end
 
   def total
-    items.inject(0) {|total,subtotal| total + item.subtotal}
+    items.inject(0) {|total,item| total + item.subtotal}
   end
   
 end

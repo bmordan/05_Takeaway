@@ -2,8 +2,8 @@ require 'sub_total'
 
 describe SubTotal do
 
-  let(:dish    ) { double :dish         }
-  let(:sub) { SubTotal.new(dish,5) }
+  let(:dish) { double :dish         }
+  let(:sub ) { SubTotal.new(dish,5) }
   
   it "should take a dish and a quantity" do
     expect(sub.quantity).to eq(5)

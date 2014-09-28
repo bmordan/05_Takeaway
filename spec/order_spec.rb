@@ -1,8 +1,8 @@
 require 'order'
 
 describe Order do
-  let(:order) {Order.new}
-  let(:subtotal) {double :subtotal}
+  let(:order   ) { Order.new        }
+  let(:subtotal) { double :subtotal }
 
   it "should hold a list of sub_totalled items" do
     order.items << subtotal
