@@ -22,6 +22,7 @@ describe Customer do
          to_return(:status => 200, :body => "{}", :headers => {})
     allow(customer).to receive(:phone)
     allow(order).to receive(:delivery_time)
+    allow(order).to receive(:total)
     expect_any_instance_of(Send).to receive(:message)
     customer.place(order)
   end

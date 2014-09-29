@@ -13,9 +13,10 @@ class Order
   end
 
   def total
-    total = items.inject(0) {|total,item| total + item.subtotal}
-    raise "The sum is not correct" if !total.is_a?(Float)
-    (total).round(2).to_s
+    sum = items.inject(0) { |total,item| total + item.subtotal }
+    total = '%.2f' % sum
+    raise "sum incorrectly calculated" if total.split('.')[1].length>2
+    total
   end
 
   def delivery_time
